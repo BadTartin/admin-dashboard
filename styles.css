@@ -16,6 +16,14 @@ body {
 
 #header {
     grid-area: 1 / 2 / 2 / 3;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+#header #top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 #main {
@@ -32,4 +40,17 @@ body {
 
 #sidebar p {
     margin-top: 0;
+}
+
+#topright {
+    display: flex;
+}
+
+#bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+#bottomleft {
+    display: flex;
 }

@@ -8,10 +8,21 @@ body {
     height: 100vh;
 }
 
+img {
+    height: 15px;
+    object-fit: cover;
+    align-self: center;
+}
+
+.menutop img {
+    height: 25px;
+}
+
 #sidebar {
     grid-area: 1 / 1 / 3 / 2;
     display: grid;
     grid-template-rows: repeat(12, 4.15vh);
+    gap: 10px;
 }
 
 #header {
@@ -26,11 +37,23 @@ body {
     justify-content: space-between;
 }
 
+#search {
+    display: flex;
+    width: 50vw;
+}
+
+input {
+    background-color: lightgrey;
+    border-radius: 5px;
+    flex: 1;
+}
+
 #main {
     grid-area: 2 / 2 / 3 / 3;
     background-color: lightgrey;
     display: grid;
     grid-template-columns: 5fr 2fr;
+    grid-template-rows: 1fr 14fr;
 }
 
 .menutop, .menuitem {
@@ -38,8 +61,8 @@ body {
     flex-direction: row;
 }
 
-#sidebar p {
-    margin-top: 0;
+p {
+    margin: 0;
 }
 
 #topright {
@@ -53,4 +76,43 @@ body {
 
 #bottomleft {
     display: flex;
+}
+
+#projects {
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr;
+    gap: 15px;
+    margin: 0px 10px 30px 10px;
+}
+
+#projects_title, #sidebar_title {
+    margin: 0px 10px 0px 10px;
+}
+
+#right_sidebar {
+    display: grid;
+    grid-template-rows: 1fr 1em 1fr;
+    margin: 0px 10px 30px 10px;
+}
+
+.project {
+    display: grid;
+    grid-template: 4fr 1fr / 5px 1fr;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.left-bar {
+    background-color: orange;
+    grid-area: 1 / 1 / 3 / 2;
+}
+
+#announcements, #trending {
+    background-color: white;
+    border-radius: 5px;
+}
+
+#announcements {
+    margin-bottom: 15px;
 }

@@ -21,6 +21,8 @@ body {
 #main {
     grid-area: 2 / 2 / 3 / 3;
     background-color: lightgrey;
+    display: grid;
+    grid-template-columns: 5fr 2fr;
 }
 
 .menutop, .menuitem {

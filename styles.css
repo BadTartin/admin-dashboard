@@ -2,6 +2,10 @@
     border: 1px solid red;
 } */
 
+html,body{
+    margin:0;
+}
+
 body {
     display: grid;
     grid-template: 1fr 5fr / 1fr 4fr;
@@ -9,25 +13,40 @@ body {
 }
 
 img {
-    height: 15px;
-    object-fit: cover;
+    height: 1rem;
+    /* object-fit: contain; */
     align-self: center;
     justify-self: center;
 }
 
-.menutop {
-    height: 30px;
-    /* align-self: center; */
+
+
+#sidebar, #header {
+    padding-top: 1rem;
 }
 
+h4 {
+    align-self: end;
+}
 
+#sidebar img {
+    filter: invert(100%);
+    /* height: 15px; */
+}
+
+#menutop {
+    height: 1.5rem;
+    /* align-self: center; */
+}
 
 #sidebar {
     grid-area: 1 / 1 / 3 / 2;
     display: grid;
-    /* grid-template-rows: repeat(12, 4.15vh); */
     grid-template-columns: 1fr 5fr;
     gap: 10px;
+    background-color: #0EA5E9;
+    color: white;
+    padding-left: .5rem;
 }
 
 #sidebar_left {
@@ -50,6 +69,8 @@ img {
     grid-area: 1 / 2 / 2 / 3;
     display: grid;
     grid-template-rows: 1fr 2fr;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 #header #top {
@@ -61,6 +82,7 @@ img {
 #search {
     display: flex;
     width: 50vw;
+    gap: .5rem;
 }
 
 input {
@@ -77,18 +99,23 @@ input {
     grid-template-rows: 1fr 14fr;
 }
 
-.menutop, .menuitem {
-    display: flex;
-    flex-direction: row;
-}
-
 p {
     margin: 0;
 }
 
 #topright {
     display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    font-weight: bold;
 }
+
+#topright p {
+    align-self: center;
+    /* padding: 0px; */
+}
+
+
 
 #bottom {
     display: flex;
@@ -97,6 +124,32 @@ p {
 
 #bottomleft {
     display: flex;
+    gap: .5rem;
+}
+
+#bottomleft img {
+    height: 3rem;
+}
+
+#greeting {
+    align-self: center;
+    font-size: .75rem;
+    font-weight: bold;
+}
+
+#greetingname {
+    font-size: 1.25rem;
+}
+
+#gizmo {
+    height: 1.75rem;
+}
+
+#bottomright {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: center;
 }
 
 #projects {
@@ -112,8 +165,13 @@ p {
 
 #right_sidebar {
     display: grid;
-    grid-template-rows: 1fr 1em 1fr;
+    grid-template-rows: 1fr 2em 1fr;
     margin: 0px 10px 30px 10px;
+    /* gap: 1rem; */
+}
+
+#trending_title {
+    margin-bottom: 0px;
 }
 
 .project {
@@ -123,6 +181,21 @@ p {
     overflow: hidden;
     background-color: white;
 }
+
+.project p {
+    font-size: .75rem;
+    padding-left: 1rem;
+    padding-right: 1.2rem;
+}
+
+.project h5 {
+    padding-left: 1rem;
+    padding-right: 1.2rem;
+    margin-bottom: .2rem;
+    margin-top: 1.5rem;
+}
+
+
 
 .left-bar {
     background-color: orange;
@@ -136,4 +209,84 @@ p {
 
 #announcements {
     margin-bottom: 15px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.25rem;
+    font-size: .75rem;
+    padding-left: .75rem;
+    padding-right: 1.2rem;
+}
+
+/* ul li:nth-child(-n+2) a */
+
+#announcements .announce-text-area:nth-child(-n+2) {
+    border-bottom: 1px solid lightgrey;
+}
+/* .announce-text-area {
+    border-bottom: 1px solid lightgrey;
+} */
+
+
+#announcements, #trending, .project {
+    box-shadow: 5px 5px 5px rgba(173, 172, 172, 0.763);
+}
+
+button {
+    background-color: #0EA5E9;
+    border-radius: 15px;
+    border: 0px;
+    color: white;
+    width: 75px;
+    height: 30px;
+    font-size: 70%;
+}
+
+.icon-area {
+    display: flex;
+    justify-content: right;
+    gap: .75rem;
+    padding-right: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+#trending {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    /* flex-direction: column; */
+    /* align-items: stretch; */
+    gap: 1rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.5rem;
+}
+
+.trend-text-area {
+    align-self: center;
+}
+
+.trenditem {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    font-size: .75rem;
+    padding-left: .75rem;
+    padding-right: 1.2rem;
+}
+
+.trenditem img {
+    height: 1.75rem;
+}
+
+.announce_title {
+    font-weight: bold;
+    font-size: .75rem;
+}
+
+.announce-text-area {
+    padding-bottom: .2rem;
+    margin-left: .75rem;
+}
+.announce_text {
+    font-size: .6rem;
+    margin-bottom: .2rem;
 }
